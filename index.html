@@ -21,6 +21,7 @@
 
 </head>
 <body>
+
     <header class="header" id="Header">
         <div id="particles-js"></div>
         <div class="header-wrap section section_1 container">
@@ -599,6 +600,7 @@
 
     <div class="up" id="back-top">Up <i class="up-i fas fa-arrow-up"></i></div>
 
+    <div id="page-preloader"><div class="contpre"><span class="spinner"></span><br>Подождите<br><small>идет загрузка</small></div></div>
 
 
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
@@ -607,5 +609,13 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <script src="build/js/main.js"></script>
+
+    <script type="text/javascript">
+        $(window).on('load', function () {
+            var $preloader = $('#page-preloader'),
+                $spinner = $preloader.find('.spinner');
+            $spinner.fadeOut();
+            $preloader.delay(500).fadeOut('slow');
+        });</script>
 </body>
 </html>
