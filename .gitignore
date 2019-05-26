@@ -1,0 +1,9 @@
+src/
+
+node_modules
+
+gulpfile.js
+
+index_v1.psd
+
+package-lock.json
