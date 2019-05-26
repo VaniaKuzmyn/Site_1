@@ -1020,3 +1020,21 @@ html {
   background: url(http://gnatkovsky.com.ua/files/preload/oval.svg) center center no-repeat;
   background-size: 41px;
   margin: -16px 0 0 -16px; }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  #page-preloader .spinner {
+    margin-left: 100px; } }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .link {
+    display: block !important; }
+    .link-title {
+      border-right: none; }
+  .our-wrap {
+    display: block; }
+  .our_story {
+    display: block;
+    margin: 0 auto;
+    text-align: center; }
+  .elem-wrap {
+    display: block; } }

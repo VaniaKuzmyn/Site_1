@@ -223,8 +223,13 @@ $(document).ready(function () {
         
     });
 
+    
+
+
     if (navigator.userAgent.match(/msie/i) || navigator.userAgent.match(/trident/i)) {
         console.log('msie') // Ie
+
+    
         $('.section_2').css('margin-top', '-100px');
         $('.section_2').css('overflow', 'hidden');
         $('.section_2').css('background-color', 'white');
@@ -287,6 +292,7 @@ $(document).ready(function () {
 
             }
         });
+
         
     }
     else if (navigator.userAgent.match(/firefox/i)) {
