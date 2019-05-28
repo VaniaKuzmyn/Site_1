@@ -296,7 +296,7 @@ $(document).ready(function () {
         
     }
     else if (navigator.userAgent.match(/firefox/i)) {
-        console.log('firefox') // gecko = firefox
+        console.log('firefox mozila') // gecko = firefox mozila
 
 
     }
@@ -306,6 +306,27 @@ $(document).ready(function () {
     else if (navigator.userAgent.match(/safari/i)) {
         console.log('Safary') // Safary (and Opera)
     }
+
+
+    $('.form-btn').click(function () {
+        event.preventDefault();
+        var email = $('.form-input_email').val();
+        var name = $('.form-input_name').val();
+        var message = $('.form-input_area').val();
+        var jqxhr = $.post('form.php', {'email': email, 'name': name, 'message': message});
+        jqxhr.done(function (data) {
+            alert(data);
+        });
+        jqxhr.fail(function (xhr, status, errorThrown) {
+           alert(status + ' bitch ' + errorThrown);
+
+        });
+    });
+
+
+
+
+
 
 });
 

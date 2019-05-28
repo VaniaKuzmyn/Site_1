@@ -23,6 +23,9 @@ $(document).ready(function () {
     if (window.scrollY >= $('.link_about').offset().top - window.innerHeight) {
         $('.link_about').addClass('fadeInUp');
     }
+
+    var mapCheckbox = true;
+
     $(window).scroll( function () {
         
         if (window.scrollY >= $('.link_about').offset().top - window.innerHeight) {
@@ -43,7 +46,10 @@ $(document).ready(function () {
         if (window.scrollY >= $('.link_contact').offset().top - window.innerHeight) {
             $('.link_contact').addClass('fadeInUp');
         }
-        
+        if (window.scrollY >= $('.section_6').offset().top - window.innerHeight && mapCheckbox) {
+            $(".footer").load("build/ajax/content.html .container");
+            mapCheckbox = false;
+        }
 
     });
 
@@ -53,17 +59,17 @@ $(document).ready(function () {
         var number = parseInt($(this).attr('data-number'));
         if (number == 1) {
             $('.title').fadeOut('slow', function () {
-                $('.title-wrap').load('build/html/other.html .title_1');
+                $('.title-wrap').load('build/ajax/other.html .title_1');
             });
         }
         else if (number == 2) {
             $('.title').fadeOut('slow', function () {
-                $('.title-wrap').load('build/html/other.html .title_2');
+                $('.title-wrap').load('build/ajax/other.html .title_2');
             });
         }
         else if (number == 3) {
             $('.title').fadeOut('slow', function () {
-                $('.title-wrap').load('build/html/other.html .title_3');
+                $('.title-wrap').load('build/ajax/other.html .title_3');
             });
         }
         
@@ -296,7 +302,7 @@ $(document).ready(function () {
         
     }
     else if (navigator.userAgent.match(/firefox/i)) {
-        console.log('firefox') // gecko = firefox
+        console.log('firefox mozila') // gecko = firefox mozila
 
 
     }
@@ -306,6 +312,27 @@ $(document).ready(function () {
     else if (navigator.userAgent.match(/safari/i)) {
         console.log('Safary') // Safary (and Opera)
     }
+
+
+    $('.form-btn').click(function () {
+        event.preventDefault();
+        var email = $('.form-input_email').val();
+        var name = $('.form-input_name').val();
+        var message = $('.form-input_area').val();
+        var jqxhr = $.post('../form.php', {'email': email, 'name': name, 'message': message});
+        jqxhr.done(function (data) {
+            alert(data);
+        });
+        jqxhr.fail(function (xhr, status, errorThrown) {
+           alert(status + ' bitch ' + errorThrown);
+
+        });
+    });
+
+
+    
+
+
 
 });
 
