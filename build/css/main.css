@@ -233,23 +233,61 @@ html {
   font-weight: 300; }
 
 .progress-bar {
-  width: 100%; }
-  .progress-bar_1::-webkit-progress-bar {
+  width: 100%;
+  border: none;
+  outline: none; }
+  .progress-bar_1 {
     background-image: -webkit-gradient(linear, left top, right top, from(#f39c12), color-stop(88%, #e6e6e6), to(#e6e6e6));
     background-image: -webkit-linear-gradient(left, #f39c12 0%, #e6e6e6 88%, #e6e6e6 100%);
     background-image: linear-gradient(to right, #f39c12 0%, #e6e6e6 88%, #e6e6e6 100%); }
-  .progress-bar_2::-webkit-progress-bar {
+    .progress-bar_1::-webkit-progress-bar {
+      background-image: -webkit-gradient(linear, left top, right top, from(#f39c12), color-stop(88%, #e6e6e6), to(#e6e6e6));
+      background-image: -webkit-linear-gradient(left, #f39c12 0%, #e6e6e6 88%, #e6e6e6 100%);
+      background-image: linear-gradient(to right, #f39c12 0%, #e6e6e6 88%, #e6e6e6 100%); }
+    .progress-bar_1::-webkit-progress-value {
+      background-image: -webkit-gradient(linear, left top, right top, from(#f39c12), color-stop(88%, #e6e6e6), to(#e6e6e6));
+      background-image: -webkit-linear-gradient(left, #f39c12 0%, #e6e6e6 88%, #e6e6e6 100%);
+      background-image: linear-gradient(to right, #f39c12 0%, #e6e6e6 88%, #e6e6e6 100%); }
+    .progress-bar_1::-moz-progress-bar {
+      background-image: linear-gradient(to right, #f39c12 0%, #e6e6e6 88%, #e6e6e6 100%); }
+  .progress-bar_2 {
     background-image: -webkit-gradient(linear, left top, right top, from(#f39c12), color-stop(76%, #e6e6e6), to(#e6e6e6));
     background-image: -webkit-linear-gradient(left, #f39c12 0%, #e6e6e6 76%, #e6e6e6 100%);
     background-image: linear-gradient(to right, #f39c12 0%, #e6e6e6 76%, #e6e6e6 100%); }
-  .progress-bar_3::-webkit-progress-bar {
+    .progress-bar_2::-webkit-progress-bar {
+      background-image: -webkit-gradient(linear, left top, right top, from(#f39c12), color-stop(76%, #e6e6e6), to(#e6e6e6));
+      background-image: -webkit-linear-gradient(left, #f39c12 0%, #e6e6e6 76%, #e6e6e6 100%);
+      background-image: linear-gradient(to right, #f39c12 0%, #e6e6e6 76%, #e6e6e6 100%); }
+    .progress-bar_2::-webkit-progress-value {
+      background-image: -webkit-gradient(linear, left top, right top, from(#f39c12), color-stop(76%, #e6e6e6), to(#e6e6e6));
+      background-image: -webkit-linear-gradient(left, #f39c12 0%, #e6e6e6 76%, #e6e6e6 100%);
+      background-image: linear-gradient(to right, #f39c12 0%, #e6e6e6 76%, #e6e6e6 100%); }
+    .progress-bar_2::-moz-progress-bar {
+      background-image: linear-gradient(to right, #f39c12 0%, #e6e6e6 76%, #e6e6e6 100%); }
+  .progress-bar_3 {
     background-image: -webkit-gradient(linear, left top, right top, from(#f39c12), color-stop(81%, #e6e6e6), to(#e6e6e6));
     background-image: -webkit-linear-gradient(left, #f39c12 0%, #e6e6e6 81%, #e6e6e6 100%);
     background-image: linear-gradient(to right, #f39c12 0%, #e6e6e6 81%, #e6e6e6 100%); }
-  .progress-bar_4::-webkit-progress-bar {
+    .progress-bar_3::-webkit-progress-bar {
+      background-image: -webkit-gradient(linear, left top, right top, from(#f39c12), color-stop(81%, #e6e6e6), to(#e6e6e6));
+      background-image: -webkit-linear-gradient(left, #f39c12 0%, #e6e6e6 81%, #e6e6e6 100%);
+      background-image: linear-gradient(to right, #f39c12 0%, #e6e6e6 81%, #e6e6e6 100%); }
+    .progress-bar_3::-webkit-progress-value {
+      background-image: -webkit-gradient(linear, left top, right top, from(#f39c12), color-stop(81%, #e6e6e6), to(#e6e6e6));
+      background-image: -webkit-linear-gradient(left, #f39c12 0%, #e6e6e6 81%, #e6e6e6 100%);
+      background-image: linear-gradient(to right, #f39c12 0%, #e6e6e6 81%, #e6e6e6 100%); }
+    .progress-bar_3::-moz-progress-bar {
+      background-image: linear-gradient(to right, #f39c12 0%, #e6e6e6 81%, #e6e6e6 100%); }
+  .progress-bar_4 {
     background-image: -webkit-gradient(linear, left top, right top, from(#f39c12), color-stop(71%, #e6e6e6), to(#e6e6e6));
     background-image: -webkit-linear-gradient(left, #f39c12 0%, #e6e6e6 71%, #e6e6e6 100%);
     background-image: linear-gradient(to right, #f39c12 0%, #e6e6e6 71%, #e6e6e6 100%); }
+    .progress-bar_4::-webkit-progress-bar {
+      background-image: -webkit-gradient(linear, left top, right top, from(#f39c12), color-stop(71%, #e6e6e6), to(#e6e6e6));
+      background-image: -webkit-linear-gradient(left, #f39c12 0%, #e6e6e6 71%, #e6e6e6 100%);
+      background-image: linear-gradient(to right, #f39c12 0%, #e6e6e6 71%, #e6e6e6 100%); }
+    .progress-bar_4::-moz-progress-bar {
+      background-image: linear-gradient(to right, #f39c12 0%, #e6e6e6 71%, #e6e6e6 100%); }
 
 .blockquote {
   color: #ffffff;
