@@ -63,7 +63,19 @@
         margin-top: 50px;
     }
 }
+@media (max-width: 810px) {
+    .menu{
+        &-item{
+            &-just{
+                margin:0 15px;
+            }
+        }
+    }
+        
 
+
+
+}
 @media (max-width: 767px) {
     .header {
         padding-top: 70px;
