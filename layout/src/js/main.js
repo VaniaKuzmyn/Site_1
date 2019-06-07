@@ -57,17 +57,17 @@ $(document).ready(function () {
         var number = parseInt($(this).attr('data-number'));
         if (number == 1) {
             $('.title').fadeOut('slow', function () {
-                $('.title-wrap').load('build/html/other.html .title_1');
+                $('.title-wrap').load('build/ajax/other.html .title_1');
             });
         }
         else if (number == 2) {
             $('.title').fadeOut('slow', function () {
-                $('.title-wrap').load('build/html/other.html .title_2');
+                $('.title-wrap').load('build/ajax/other.html .title_2');
             });
         }
         else if (number == 3) {
             $('.title').fadeOut('slow', function () {
-                $('.title-wrap').load('build/html/other.html .title_3');
+                $('.title-wrap').load('build/ajax/other.html .title_3');
             });
         }
         
