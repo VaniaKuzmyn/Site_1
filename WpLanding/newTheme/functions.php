@@ -246,7 +246,6 @@
             foreach(get_posts($args) as $post){
                 $review = get_fields($post->ID);
                 $review['title'] = $post->post_title;
-                $review['content'] = $post->post_content;
                 $Pricing[] = $review;
             }
         

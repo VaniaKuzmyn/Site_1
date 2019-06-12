@@ -256,7 +256,7 @@ $(document).ready(function () {
 
   
   $(document).on( 'wpcf7mailsent', function( event ) {
-    $(".form-wrap").slideUp('slow');
+    $(".form-inner").slideUp('slow');
   });
   
 

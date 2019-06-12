@@ -110,8 +110,7 @@
             </div>
             <div class="our-wrap our-wrap_skills row">
                 <div class="our-img-wrap col">
-                    <img src="<?php echo NEWTHEME_IMG_DIR; ?>img/iPhone.png" alt="alt" class="our-img our-img_1" />
-                    <img src="<?php echo NEWTHEME_IMG_DIR; ?>img/iPad.png" alt="alt" class="our-img our-img_2" />
+                    <img src="<?php echo NEWTHEME_IMG_DIR; ?>img/iPad.jpg" alt="alt" class="our-img our-img_2" />
                     
                 </div>
                 <div class="our our_skills col">
@@ -387,7 +386,7 @@
                     “Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum
                     auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.”
                 </blockquote>
-                <div class="quote-img-wrap"><img class="quote-img" src="<?php echo NEWTHEME_IMG_DIR; ?>people/Layer_15.png" alt="Alternate Text" /></div>
+                <div class="quote-img-wrap"><img class="quote-img" src="<?php echo NEWTHEME_IMG_DIR; ?>people/Layer_15.jpg" alt="Alternate Text" /></div>
                 <div class="toggle toggle_quote col">
                     <i class="toggle-item_quote toggle-item toggle-item-active fas fa-circle"></i>
                     <i class="toggle-item_quote toggle-item fas fa-circle"></i>
@@ -438,43 +437,43 @@
 
                     <div class="card col-12 col-xl-3 col-lg-3 col-md-4 col-sm-6">
                         <div class="card-img-wrap">
-                            <img src="<?php echo NEWTHEME_IMG_DIR; ?>img/Layer_7.png" alt="alt" class="card-img" />
+                            <img src="<?php echo NEWTHEME_IMG_DIR; ?>img/Layer_7.jpg" alt="alt" class="card-img" />
                         </div>                        <div class="card-title">Project Title Here</div>
                         <div class="card-desc">Photography</div>
                     </div>
                     <div class="card col-12 col-xl-3 col-lg-3 col-md-4 col-sm-6">
                         <div class="card-img-wrap">
-                            <img src="<?php echo NEWTHEME_IMG_DIR; ?>img/Layer_7.png" alt="alt" class="card-img" />
+                            <img src="<?php echo NEWTHEME_IMG_DIR; ?>img/Layer_7.jpg" alt="alt" class="card-img" />
                         </div>                        <div class="card-title">Project Title Here</div>
                         <div class="card-desc">Branding</div>
                     </div>
                     <div class="card col-12 col-xl-3 col-lg-3 col-md-4 col-sm-6">
                         <div class="card-img-wrap">
-                            <img src="<?php echo NEWTHEME_IMG_DIR; ?>img/Layer_7.png" alt="alt" class="card-img" />
+                            <img src="<?php echo NEWTHEME_IMG_DIR; ?>img/Layer_7.jpg" alt="alt" class="card-img" />
                         </div>                        <div class="card-title">Project Title Here</div>
                         <div class="card-desc">Graphics</div>
                     </div>
                     <div class="card col-12 col-xl-3 col-lg-3 col-md-4 col-sm-6">
                         <div class="card-img-wrap">
-                            <img src="<?php echo NEWTHEME_IMG_DIR; ?>img/Layer_7.png" alt="alt" class="card-img" />
+                            <img src="<?php echo NEWTHEME_IMG_DIR; ?>img/Layer_7.jpg" alt="alt" class="card-img" />
                         </div>                        <div class="card-title">Project Title Here</div>
                         <div class="card-desc">Web Design</div>
                     </div>
                     <div class="card col-12 col-xl-3 col-lg-3 col-md-4 col-sm-6">
                         <div class="card-img-wrap">
-                            <img src="<?php echo NEWTHEME_IMG_DIR; ?>img/Layer_7.png" alt="alt" class="card-img" />
+                            <img src="<?php echo NEWTHEME_IMG_DIR; ?>img/Layer_7.jpg" alt="alt" class="card-img" />
                         </div>                        <div class="card-title">Project Title Here</div>
                         <div class="card-desc">Video</div>
                     </div>
                     <div class="card col-12 col-xl-3 col-lg-3 col-md-4 col-sm-6">
                         <div class="card-img-wrap">
-                            <img src="<?php echo NEWTHEME_IMG_DIR; ?>img/Layer_7.png" alt="alt" class="card-img" />
+                            <img src="<?php echo NEWTHEME_IMG_DIR; ?>img/Layer_7.jpg" alt="alt" class="card-img" />
                         </div>                        <div class="card-title">Project Title Here</div>
                         <div class="card-desc">Photography</div>
                     </div>
                     <div class="card col-12 col-xl-3 col-lg-3 col-md-4 col-sm-6">
                         <div class="card-img-wrap">
-                            <img src="<?php echo NEWTHEME_IMG_DIR; ?>img/Layer_7.png" alt="alt" class="card-img" />
+                            <img src="<?php echo NEWTHEME_IMG_DIR; ?>img/Layer_7.jpg" alt="alt" class="card-img" />
                         </div>                        <div class="card-title">Project Title Here</div>
                         <div class="card-desc">Branding</div>
                     </div>
@@ -522,7 +521,7 @@
                     <div class="elem-wrap">
                         <div class="elem-desc">
                             <span>21 Feb ‘14</span><br />
-                            <span><?php echo $review['name'] ?></span><br />
+                            <span>John Doe</span><br />
                             <span>24 Comments</span>
                         </div>
                         <div class="elem-wrapper">
@@ -544,7 +543,7 @@
 
                 <div class="elem col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                     <div class="elem-work">
-                        <img class ='elem-work-img' src="<?php echo NEWTHEME_IMG_DIR; ?>img/Layer_4.png" alt="alt">
+                        <img class ='elem-work-img' src="<?php echo NEWTHEME_IMG_DIR; ?>img/Layer_4.jpg" alt="alt">
                         <h5 class="elem-title">Awesome Blog Post Title Goes Here</h5>
                     </div>
                     <div class="elem-wrap">
@@ -561,7 +560,7 @@
                 </div>
                 <div class="elem col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                     <div class="elem-work">
-                        <img class ='elem-work-img' src="<?php echo NEWTHEME_IMG_DIR; ?>img/Layer_4.png" alt="alt"> 
+                        <img class ='elem-work-img' src="<?php echo NEWTHEME_IMG_DIR; ?>img/Layer_4.jpg" alt="alt"> 
                         <h5 class="elem-title">Awesome Blog Post Title Goes Here</h5>
                     </div>
                     <div class="elem-wrap">
@@ -578,7 +577,7 @@
                 </div>
                 <div class="elem col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                     <div class="elem-work">
-                        <img class ='elem-work-img' src="<?php echo NEWTHEME_IMG_DIR; ?>img/Layer_4.png" alt="alt">
+                        <img class ='elem-work-img' src="<?php echo NEWTHEME_IMG_DIR; ?>img/Layer_4.jpg" alt="alt">
                         <h5 class="elem-title">Awesome Blog Post Title Goes Here</h5>
                     </div>
                     <div class="elem-wrap">
@@ -602,7 +601,6 @@
                 <div class="client-title">Our Clients</div>
                 <div class="row client-wrap">
 
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-12 col-xl-3 client client-echo"><div class="client-echo-text">start Sharing</div></div>
                     <div class="col-12 col-sm-6 col-md-6 col-lg-12 col-xl-3 client client-color">
                         <svg class="color-svg">
                             <circle class="color-circle color-circle_green" cx="40" cy="100" r="25" />
@@ -611,8 +609,6 @@
                         </svg>
                         <div class="client-color-text"><span class="client-color-green">Co</span>lor</div>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-12 col-xl-3 client client-music"><img src="<?php echo NEWTHEME_IMG_DIR; ?>img/Layer_47.png" alt="Alternate Text" /></div>
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-12 col-xl-3 client client-containes"><img src="<?php echo NEWTHEME_IMG_DIR; ?>img/Layer_46.png" alt="Alternate Text" /></div>
 
                 </div>
             </div>
@@ -629,9 +625,10 @@
             </div>
 
             <div class="form-outer row">
-                <?php 
-                echo do_shortcode('[contact-form-7 id="29" title="Контактная форма 1"]');
+            <?php 
+                echo do_shortcode('[contact-form-7 id="73" title="Контактная форма 1"]');
                 ?>
+                
                 <div class="info col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                     <div class="form-title">Contact Info</div>
                     <p class="info-item info-item_text info-text">Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat </p>

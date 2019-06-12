@@ -3,18 +3,17 @@ html {
   font-family: "Open Sans"; }
 
 .header {
-  color: #ffffff;
+  color: #555d66;
   text-transform: uppercase;
-  background: url("../images/bg/headerbg.png") center center;
+  background: url("../images/bg/headerbg.jpg") center center;
   background-size: cover;
-  background-color: #34495e;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 93%, 0% 100%);
   clip-path: polygon(0 0, 100% 0, 100% 93%, 0% 100%);
   padding: 100px 10px 120px;
-  text-align: center; }
+  text-align: center;
+  position: relative; }
   .header-wrap {
     margin: 0 auto; }
-
 .logo {
   font-family: Montserrat;
   font-size: 45px;
@@ -53,7 +52,7 @@ html {
   .menu-item {
     position: relative; }
     .menu-item-just {
-      color: #ffffff;
+      color: #555d66;
       text-decoration: none;
       display: inline-block;
       margin: 0 20px;
@@ -61,7 +60,7 @@ html {
       .menu-item-just_works {
         color: #0d0d0d; }
       .menu-item-just:hover {
-        color: #0d0d0d;
+        color: #f39c12;
         text-decoration: none; }
     .menu-item:not(:last-child):after {
       content: '||';
@@ -292,13 +291,13 @@ html {
       background-image: linear-gradient(to right, #f39c12 0%, #e6e6e6 71%, #e6e6e6 100%); }
 
 .blockquote {
-  color: #ffffff;
+  color: #555d66;
   font-size: 45px;
   text-align: center; }
   .blockquote-outer {
     -webkit-clip-path: polygon(0 7%, 100% 0, 100% 93%, 0 100%);
     clip-path: polygon(0 7%, 100% 0, 100% 93%, 0 100%);
-    background: url("../images/bg/headerbg.png") center center;
+    background: url("../images/bg/headerbg.jpg") center center;
     background-size: cover;
     background-color: #000000;
     padding: 200px 0; }
@@ -397,9 +396,9 @@ html {
 .merit {
   text-align: center;
   font-size: 25px;
-  color: #ffffff; }
+  color: #555d66; }
   .merit-outer {
-    background: url("../images/bg/headerbg.png") center center;
+    background: url("../images/bg/headerbg.jpg") center center;
     background-size: cover;
     background-color: #000000;
     padding: 180px 0 220px;
@@ -487,7 +486,7 @@ html {
     background-color: #f39c12; }
 
 .quote {
-  background: url("../images/bg/headerbg.png") center center;
+  background: url("../images/bg/headerbg.jpg") center center;
   background-size: cover;
   background-color: #000000;
   padding: 180px 0 220px;
@@ -496,7 +495,7 @@ html {
   text-align: center; }
   .quote-text {
     font-size: 22px;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(85, 93, 102, 0.8);
     margin-top: 50px; }
   .quote-name {
     color: #ffffff;
@@ -566,7 +565,7 @@ html {
     font-weight: 600; }
 
 .mark {
-  color: #ffffff;
+  color: #555d66;
   text-align: center;
   font-size: 22px; }
   .mark-i {
@@ -697,7 +696,7 @@ html {
     -webkit-justify-content: space-between;
     justify-content: space-between; }
   .client-echo {
-    background: url("../images/img/Layer_40.png") center center no-repeat;
+    background: url("../images/img/Layer_40.jpg") center center no-repeat;
     font-size: 13px;
     font-style: italic;
     display: -webkit-box;
@@ -972,6 +971,9 @@ html {
     margin: -60px 0; }
   .merit-outer {
     margin-top: 0; }
+  .price{
+    margin: 10px auto;
+  }
   .price-outer {
     display: block; }
   .link {
@@ -997,7 +999,12 @@ html {
     display: block;
     margin: 0 auto; }
   .copy {
-    white-space: inherit; } }
+    white-space: inherit; } 
+  #form{
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
 
 @media (max-width: 535px) {
   .client-wrap {
