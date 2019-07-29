@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
@@ -23,7 +24,7 @@
 
 </head>
 <body>
-
+    <div class = "progression"></div>
 
     <header class="header" id="Header">
         <div id="particles-js"></div>
@@ -70,23 +71,17 @@
          
             <div class="link link_about">
 
-            <?php
-            global $post;
-            $tmp_post = $post;
-            $args = array('post_type'   => 'faq');
-            $myposts = get_posts( $args );
-            foreach( $myposts as $post ){ setup_postdata($post);
-                ?>
-                <h3 class="link-title"><?php echo $post->post_title; ?></h3>
-                    <p class="link-text">
-                    <?php echo $post->post_content; ?>
-                    </p>
-                <?php
-            } 
-            $post = $tmp_post;
-            ?>
-
-
+                <h3 class="link-title link-title_about">
+                    <?php the_field('link-title_about'); ?>
+                    <span class="move-border"></span>
+                    <span class="move-border"></span>
+                    <span class="move-border"></span>
+                    <span class="move-border"></span>
+                </h3>
+                <p class="link-text link-text_about">
+                    <?php the_field('link-text_about'); ?>
+                </p>
+                
             </div>
 
 
@@ -95,7 +90,7 @@
                 <div class="our our_story col-12 col-xl-7 col-lg-8 col-md-12 col-sm-12 col-xs-12">
                     <div class="our-i-wrap"><i class="our-i far fa-lightbulb"></i></div>
                     <div class="our-main">
-                        <h4 class="our-title">Our Story</h4>
+                        <h4 class="our-title our-title_1">Our Story</h4>
                         <p class="our-desc">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. </p>
                         <p class="our-text">
                             Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
@@ -166,7 +161,12 @@
     <section class="section section_3" id="Team">
         <div class="container container_team">
             <div class="link link_team">
-                <h3 class="link-title">Team</h3>
+                <h3 class="link-title">Team
+                <span class="move-border"></span>
+                    <span class="move-border"></span>
+                    <span class="move-border"></span>
+                    <span class="move-border"></span>
+                </h3>
                 <p class="link-text">
                     Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
                 </p>
@@ -181,7 +181,7 @@
             <?php foreach(getReviews() as $review): ?>
             
             
-                <div class="folk-img"><img class='folk-img-just' src="<?php echo $review['img'] ?>" alt="alternate"></i></div>
+                    <div class="folk-img"><i class="folk-i fas fa-user-tie"></i></div>
                     <div class="folk-name"><?php echo $review['name'] ?></div>
                     <div class="folk-profession"><?php echo $review['job'] ?></div>
                     <div class="folk-desc"><?php echo $review['text'] ?></div>
@@ -294,7 +294,12 @@
     <main class="section section_4" id="Services">
         <div class="container">
             <div class="link link_service">
-                <h3 class="link-title">Service</h3>
+                <h3 class="link-title">Service
+                <span class="move-border"></span>
+                    <span class="move-border"></span>
+                    <span class="move-border"></span>
+                    <span class="move-border"></span>
+                </h3>
                 <p class="link-text">
                     Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
                 </p>
@@ -379,19 +384,48 @@
                 </div>
             </div>
         </div>
+
+
         <div class="quote">
             <div class="container">
-                <cite class="quote-name">Maria Jones</cite>
-                <blockquote class="quote-text">
-                    “Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum
-                    auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.”
-                </blockquote>
-                <div class="quote-img-wrap"><img class="quote-img" src="<?php echo NEWTHEME_IMG_DIR; ?>people/Layer_15.jpg" alt="Alternate Text" /></div>
-                <div class="toggle toggle_quote col">
-                    <i class="toggle-item_quote toggle-item toggle-item-active fas fa-circle"></i>
-                    <i class="toggle-item_quote toggle-item fas fa-circle"></i>
-                    <i class="toggle-item_quote toggle-item fas fa-circle"></i>
+                <div class="quote-slider">
+
+                    <div class="quote-slide">
+                        <cite class="quote-name">Maria Jones</cite>
+                        <blockquote class="quote-text">
+                            “Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum
+                            auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.”
+                        </blockquote>
+                        <div class="quote-img-wrap"><img class="quote-img" src="<?php echo NEWTHEME_IMG_DIR; ?>people/Layer_15.jpg" alt="Alternate Text" /></div>
+                    </div>
+                    <div class="quote-slide">
+                        <cite class="quote-name">Maria Jones</cite>
+                        <blockquote class="quote-text">
+                            “Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum
+                            auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.”
+                        </blockquote>
+                        <div class="quote-img-wrap"><img class="quote-img" src="<?php echo NEWTHEME_IMG_DIR; ?>people/Layer_15.jpg" alt="Alternate Text" /></div>
+                    </div>
+                    <div class="quote-slide">
+                        <cite class="quote-name">Maria Jones</cite>
+                        <blockquote class="quote-text">
+                            “Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum
+                            auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.”
+                        </blockquote>
+                        <div class="quote-img-wrap"><img class="quote-img" src="<?php echo NEWTHEME_IMG_DIR; ?>people/Layer_15.jpg" alt="Alternate Text" /></div>
+                    </div>
+
+                <?php foreach(getQuote() as $reviews): ?>
+                    <div class="quote-slide">
+                        <cite class="quote-name"><?php echo $reviews['title'] ?></cite>
+                        <blockquote class="quote-text">
+                        <?php echo $reviews['content'] ?>
+                        </blockquote>
+                        <div class="quote-img-wrap"><img class="quote-img" src="<?php echo $reviews['thumbnail'] ?>" alt="Alternate Text" /></div>
+                    </div>
+                <?php endforeach ?>
                 </div>
+                
             </div>
         </div>
     </main>
@@ -399,7 +433,12 @@
     <section class="section section_5" id="Works">
         <div class="container">
             <div class="link link_portfolio">
-                <h3 class="link-title">Portfolio</h3>
+                <h3 class="link-title">Portfolio
+                <span class="move-border"></span>
+                    <span class="move-border"></span>
+                    <span class="move-border"></span>
+                    <span class="move-border"></span>
+                </h3>
                 <p class="link-text">
                     Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
                 </p>
@@ -424,13 +463,13 @@
             
                 <div class="card col-12 col-xl-3 col-lg-3 col-md-4 col-sm-6">
                         <div class="card-img-wrap">
-                            <img src="<?php echo $portfolio['img'] ?>" alt="alt" class="card-img" />
+                        <img src="<?php echo NEWTHEME_IMG_DIR; ?>img/Layer_7.jpg" alt="alt" class="card-img" />
                         </div>
                         <div class="card-title"><?php echo $portfolio['title'] ?></div>
                         <div class="card-desc"><?php echo $portfolio['job'] ?></div>
                     </div>
 
-            <?php endforeach ?>
+                <?php endforeach ?>
                     
 
 
@@ -480,29 +519,44 @@
                 </div>
 
 
-
-
             </div>
 
         </div>
+
+        
         <div class="blockquote-outer mark">
             <div class="container ">
+            <?php foreach(getMark() as $reviews): ?>
                 <i class="mark-i fab fa-twitter"></i>
                 <blockquote class="mark-quote">
-                    Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh
-                    <cite class="mark-cite">
-                        ow.ly/ttlwd
+                <?php echo $reviews['mark-content'] ?>
+<!--                 Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh
+ -->                <cite class="mark-cite">
+                        <?php echo $reviews['mark-href'] ?>
+                        <!-- ow.ly/ttlwd -->
                     </cite>
                 </blockquote>
-                <div class="mark-time">3 hours ago</div>
+                
+                <div class="mark-time">
+                Опубликовано: 
+                <?php echo $reviews['time'] ?>
+                    <!-- 3 hours ago -->
+                </div>
+                <?php endforeach ?>
             </div>
         </div>
+
     </section>
 
     <section class="section section_6" id="Blog">
         <div class="container">
             <div class="link link_blog">
-                <h3 class="link-title">Blog</h3>
+                <h3 class="link-title">Blog
+                <span class="move-border"></span>
+                    <span class="move-border"></span>
+                    <span class="move-border"></span>
+                    <span class="move-border"></span>
+                </h3>
                 <p class="link-text">
                     Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
                 </p>
@@ -515,7 +569,7 @@
             
                 <div class="elem col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                     <div class="elem-work">
-                        <img class ='elem-work-img' src="<?php echo $review['img'] ?>" alt="alt">
+                    <img class ='elem-work-img' src="<?php echo NEWTHEME_IMG_DIR; ?>img/Layer_4.jpg" alt="alt">
                         <h5 class="elem-title"><?php echo $review['title'] ?></h5>
                     </div>
                     <div class="elem-wrap">
@@ -616,34 +670,48 @@
     </section>
 
     <section class="section section_7" id="Contact">
-        <div class="container">
-            <div class="link link_contact">
-                <h3 class="link-title">Contact</h3>
-                <p class="link-text">
-                    Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
-                </p>
-            </div>
-
-            <div class="form-outer row">
-            <?php 
-                echo do_shortcode('[contact-form-7 id="73" title="Контактная форма 1"]');
-                ?>
-                
-                <div class="info col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                    <div class="form-title">Contact Info</div>
-                    <p class="info-item info-item_text info-text">Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat </p>
-                    <div class="info-item info-item_addres">
-                        <i class="info-item-i fas fa-map-marker-alt"></i> 13/2 Elizabeth St, Melbourne VIC 3000, Australia
-                    </div>
-                    <div class="info-item info-item_tel"><i class="info-item-i fas fa-phone"></i>+61 3146 8728, +61 0987 6543</div>
-                    <div class="info-item info-item_email"><i class="info-item-i fas fa-envelope"></i>support@envato.net</div>
-                
-            </div>
-            </div>
-
-
-                
+    <div class="container">
+        <div class="link link_contact">
+            <h3 class="link-title link-title_contact"><?php the_field('link_contact'); ?><!-- Contact -->
+            <span class="move-border"></span>
+                    <span class="move-border"></span>
+                    <span class="move-border"></span>
+                    <span class="move-border"></span>
+            </h3>
+            <p class="link-text link_contact-text">
+            <?php the_field('link_contact-text'); ?>
+<!--                 
+    Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
+ -->            </p>
         </div>
+        <div class="form-outer row">
+        <?php 
+            echo do_shortcode('[contact-form-7 id="8" title="Контактная форма 1"]');
+            ?>
+            
+            <div class="info col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                <div class="form-title">Contact Info</div>
+                <p class="info-item info-item_text info-text">
+                    <?php the_field('info-item_text'); ?>
+                    <!-- 
+                    Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat
+                    -->
+                </p>
+                <div class="info-item info-item_addres">
+                    <i class="info-item-i fas fa-map-marker-alt"></i><?php the_field('info-item_addres'); ?>
+                    <!-- 13/2 Elizabeth St, Melbourne VIC 3000, Australia -->
+                </div>
+                <div class="info-item info-item_tel"><i class="info-item-i fas fa-phone"></i><?php the_field('info-item_tel'); ?>
+                <!-- +61 3146 8728, +61 0987 6543 -->
+                </div>
+                <div class="info-item info-item_email"><i class="info-item-i fas fa-envelope"></i><?php the_field('info-item_email'); ?>
+                <!-- support@envato.net -->
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
     </section>
 
     <footer class="footer"></footer>

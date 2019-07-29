@@ -1,5 +1,6 @@
 <?php
 
+
     add_filter('show_admin_bar', '__return_false'); 
     define('NEWTHEME_THEME_ROOT', get_template_directory_uri());
     define('NEWTHEME_CSS_DIR', NEWTHEME_THEME_ROOT . '/build/css');
@@ -18,7 +19,10 @@
         wp_deregister_script( 'jquery' );
         wp_register_script( 'jquery', 'https://code.jquery.com/jquery-3.4.0.min.js');
         wp_enqueue_script( 'jquery');
-        
+
+        wp_enqueue_script( 'slick','https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js');
+        wp_enqueue_script( 'wow', NEWTHEME_JS_DIR . '/wow.min.js');
+        wp_enqueue_script( 'textyle', NEWTHEME_JS_DIR . '/textyle.min.js');
         wp_enqueue_script( 'particlesjs', NEWTHEME_JS_DIR . '/particles.min.js');
 
         wp_enqueue_script( 'main', NEWTHEME_JS_DIR . '/main.js');
@@ -28,6 +32,7 @@
         add_theme_support('post-thumbnails');
 
         function register_post_types(){
+
             register_post_type('faq', array(
                 'labels' => array(
                     'name'               => 'Вопрос-ответ', // основное название для типа записи
@@ -49,7 +54,6 @@
                 
             ) );
                 
-
             register_post_type('Team', array(
                 'labels' => array(
                     'name'               => 'Team', // основное название для типа записи
@@ -92,7 +96,6 @@
                 
             ) );
 
-
             register_post_type('portfolio', array(
                 'labels' => array(
                     'name'               => 'portfolio', // основное название для типа записи
@@ -113,8 +116,6 @@
                 'supports'            => array('title', 'editor') // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
                 
             ) );
-
-
 
             register_post_type('BlogPost', array(
                 'labels' => array(
@@ -137,7 +138,6 @@
                 
             ) );
 
-
             register_post_type('Pricing', array(
                 'labels' => array(
                     'name'               => 'price', // основное название для типа записи
@@ -158,9 +158,58 @@
                 'supports'            => array('title') // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
                 
             ) );
+
+            register_post_type('Quote', array(
+                'labels'             => array(
+                    'name'               => 'Цитаты', // Основное название типа записи
+                    'singular_name'      => 'Цитата', // отдельное название записи типа Book
+                    'add_new'            => 'Добавить новую -',
+                    'add_new_item'       => 'Добавить новую -',
+                    'edit_item'          => 'Редактировать -',
+                    'new_item'           => 'Новая -',
+                    'view_item'          => 'Посмотреть -',
+                    'search_items'       => 'Найти -',
+                    'not_found'          => '- не найдено',
+                    'not_found_in_trash' => '- Не найдено',
+                    'parent_item_colon'  => '',
+                    'menu_name'          => 'Цитаты'
+        
+                  ),
+                'public'             => false,
+                'publicly_queryable' => true,
+                'show_ui'            => true,
+                'show_in_menu'       => true,
+                'query_var'          => true,
+                'rewrite'            => true,
+                'capability_type'    => 'post',
+                'has_archive'        => true,
+                'hierarchical'       => false,
+                'menu_position'      => null,
+                'supports'           => array('title','editor','author','thumbnail','excerpt','comments')
+            ) );
+
+            register_post_type('Mark', array(
+                'labels'             => array(
+                    'name'               => 'Mark', // Основное название типа записи
+                    'singular_name'      => 'Mark', // отдельное название записи типа Book
+                    'add_new'            => 'Добавить новую -',
+                    'add_new_item'       => 'Добавить новую -',
+                    'edit_item'          => 'Редактировать -',
+                    'new_item'           => 'Новая -',
+                    'view_item'          => 'Посмотреть -',
+                    'search_items'       => 'Найти -',
+                    'not_found'          => '- не найдено',
+                    'not_found_in_trash' => '- Не найдено',
+                    'parent_item_colon'  => '',
+                    'menu_name'          => 'Mark'
+        
+                  ),
+                'public'             => false,
+                'show_ui'            => true,
+                'supports'           => array()
+            ) );
     }
 
-   
     $posts = get_posts( array(
         'orderby'     => 'date',
         'order'       => 'ASC',
@@ -198,9 +247,6 @@
         return $variables;
     }
 
-
-
-
     function getPortfolio(){
         $args = array(
             'orderby'     => 'date',
@@ -217,7 +263,6 @@
         
         return $portfolios;
     }
-
 
     function getBlogPost(){
         $args = array(
@@ -252,16 +297,39 @@
         return $Pricing;
     }
 
+    function getQuote(){
+        $args = array(
+            'orderby'     => 'date',
+            'order'       => 'ASC',
+            'post_type'   => 'Quote'
+        );
+            $reviews = [];
+            foreach(get_posts($args) as $post){
+                $review = get_fields($post->ID);
+                $review['title'] = $post->post_title;
+                $review['content'] = $post->post_content;
+                $review['thumbnail'] = get_the_post_thumbnail_url( $post->ID, 'thumbnail' );
+                $reviews[] = $review;
+            }
+        return $reviews;
+    }
 
-
- 
-
-
-
-
-
-
-
+    function getMark(){
+        $args = array(
+            'orderby'     => 'date',
+            'order'       => 'ASC',
+            'post_type'   => 'Mark'
+        );
+            $reviews = [];
+            foreach(get_posts($args) as $post){
+                $review = get_fields($post->ID);
+                $review['title'] = $post->post_title;
+                $review['content'] = $post->post_content;
+                $review['time'] = human_time_diff(get_the_time('U'), current_time('timestamp')) . ' назад';
+                $reviews[] = $review;
+            }
+        return $reviews;
+    }
 
     // remove tag 'span' from the form
     add_filter('wpcf7_form_elements', function($content) {
