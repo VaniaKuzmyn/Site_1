@@ -334,9 +334,14 @@
     // remove tag 'span' from the form
     add_filter('wpcf7_form_elements', function($content) {
         $content = preg_replace('/<(span).*?class="\s*(?:.*\s)?wpcf7-form-control-wrap(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i', '\2', $content);
-    
         return $content;
     });
+
+
+    add_filter('style_loader_tag', 'sj_remove_type_attr', 10, 2);
+    add_filter('script_loader_tag', 'sj_remove_type_attr', 10, 2);
+    function sj_remove_type_attr($buffer) {
+        return preg_replace( "%[ ]type=[\'\"]text\/(javascript|css)[\'\"]%", '', $buffer );    }
    
 
     

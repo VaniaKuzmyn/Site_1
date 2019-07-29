@@ -17,21 +17,26 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
    
-
     <?
         wp_head();
     ?>
 
 </head>
 <body>
+    <!-- Progress bar -->
     <div class = "progression"></div>
 
+    <!-- Header -->
     <header class="header" id="Header">
         <div id="particles-js"></div>
         <div class="header-wrap section section_1 container">
             <div class="row align-items-center header-top">
+
+                <!-- Logo -->
                 <div class="col col-xl-4 col-lg-4 col-md-2  col-sm-6 col-xs-12 logo-wrap"><span class="logo">Mini</span></div>
-                <menu class="col col-xl-8 col-lg-8 col-md-10 col-sm-6 col-xs-12 menu-wrap">
+                
+                <!-- Menu -->
+                <div class="col col-xl-8 col-lg-8 col-md-10 col-sm-6 col-xs-12 menu-wrap">
                     <ul class="menu">
                         <li class="menu-item"><a class="menu-item-just" href="#About">About</a></li>
                         <li class="menu-item"><a class="menu-item-just" href="#Team">Team</a></li>
@@ -40,8 +45,10 @@
                         <li class="menu-item"><a class="menu-item-just" href="#Blog">Blog</a></li>
                         <li class="menu-item"><a class="menu-item-just" href="#Contact">Contact</a></li>
                     </ul>
-                </menu>
+                </div>
             </div>
+
+            <!-- Title -->
             <div class="title-wrap">
                 <h1 class="title title_1">
                     Best Creative Studio<br />
@@ -65,12 +72,13 @@
             </div>
         </div>
     </header>
-
+    
+    <!-- Section-2 About -->
     <section class="section section_2" id="About">
         <div class="container">
-         
-            <div class="link link_about">
 
+            <!-- Title -->
+            <div class="link link_about">
                 <h3 class="link-title link-title_about">
                     <?php the_field('link-title_about'); ?>
                     <span class="move-border"></span>
@@ -81,10 +89,7 @@
                 <p class="link-text link-text_about">
                     <?php the_field('link-text_about'); ?>
                 </p>
-                
             </div>
-
-
 
             <div class="our-wrap our-wrap_story row align-items-center">
                 <div class="our our_story col-12 col-xl-7 col-lg-8 col-md-12 col-sm-12 col-xs-12">
@@ -120,6 +125,8 @@
                             </p>
                         </div>
                     </div>
+
+                    <!-- Progress -->
                     <div class="progress-box">
                         <label class="progress-item">
                             Design <span class="progress-per">/ 88%</span><br />
@@ -157,9 +164,11 @@
         
     </section>
 
-
+    <!-- Section-3 Team -->
     <section class="section section_3" id="Team">
         <div class="container container_team">
+
+            <!-- Title -->
             <div class="link link_team">
                 <h3 class="link-title">Team
                 <span class="move-border"></span>
@@ -172,14 +181,11 @@
                 </p>
             </div>
 
-
             <div class="row folk-outer">
 
             <div class="col-12 col-xl-3 col-lg-3 col-md-6 col-sm-6 folk">
            
-           
             <?php foreach(getReviews() as $review): ?>
-            
             
                     <div class="folk-img"><i class="folk-i fas fa-user-tie"></i></div>
                     <div class="folk-name"><?php echo $review['name'] ?></div>
@@ -193,20 +199,11 @@
                         <i class="feature-item fab fa-linkedin-in"></i>
                     </div>
 
-
                 <?php endforeach ?>
-            
-            
-
-                    
-
-
-
+    
                 </div>
 
-
-
-                
+                <!-- Our team cards-->
                 <div class="col-12 col-xl-3 col-lg-3 col-md-6 col-sm-6 folk">
                     <div class="folk-img"><i class="folk-i fas fa-user-tie"></i></div>
                     <div class="folk-name">Jesmine Doe</div>
@@ -291,8 +288,11 @@
         </div>
     </section>
 
+    <!-- Main Services -->
     <main class="section section_4" id="Services">
         <div class="container">
+
+            <!-- Titel -->
             <div class="link link_service">
                 <h3 class="link-title">Service
                 <span class="move-border"></span>
@@ -304,6 +304,8 @@
                     Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
                 </p>
             </div>
+
+            <!-- Main cards -->
             <div class="row service-outer">
                 <div class="col-12 col-xl-4 col-md-4 service">
                     <div>
@@ -430,6 +432,7 @@
         </div>
     </main>
 
+    <!-- Section-5 Works -->
     <section class="section section_5" id="Works">
         <div class="container">
             <div class="link link_portfolio">
@@ -526,12 +529,11 @@
         
         <div class="blockquote-outer mark">
             <div class="container ">
-            <?php foreach(getMark() as $reviews): ?>
+                <?php foreach(getMark() as $reviews): ?>
                 <i class="mark-i fab fa-twitter"></i>
                 <blockquote class="mark-quote">
                 <?php echo $reviews['mark-content'] ?>
-<!--                 Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh
- -->                <cite class="mark-cite">
+                    <cite class="mark-cite">
                         <?php echo $reviews['mark-href'] ?>
                         <!-- ow.ly/ttlwd -->
                     </cite>
@@ -548,6 +550,7 @@
 
     </section>
 
+    <!-- Section-6 Blog -->
     <section class="section section_6" id="Blog">
         <div class="container">
             <div class="link link_blog">
@@ -669,55 +672,61 @@
         </div>
     </section>
 
+    <!-- Section-7 Contact -->
     <section class="section section_7" id="Contact">
-    <div class="container">
-        <div class="link link_contact">
-            <h3 class="link-title link-title_contact"><?php the_field('link_contact'); ?><!-- Contact -->
-            <span class="move-border"></span>
-                    <span class="move-border"></span>
-                    <span class="move-border"></span>
-                    <span class="move-border"></span>
-            </h3>
-            <p class="link-text link_contact-text">
-            <?php the_field('link_contact-text'); ?>
-<!--                 
-    Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
- -->            </p>
-        </div>
-        <div class="form-outer row">
-        <?php 
-            echo do_shortcode('[contact-form-7 id="8" title="Контактная форма 1"]');
-            ?>
-            
-            <div class="info col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                <div class="form-title">Contact Info</div>
-                <p class="info-item info-item_text info-text">
-                    <?php the_field('info-item_text'); ?>
-                    <!-- 
-                    Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat
-                    -->
+        <div class="container">
+
+            <!-- Title -->
+            <div class="link link_contact">
+                <h3 class="link-title link-title_contact"><?php the_field('link_contact'); ?><!-- Contact -->
+                <span class="move-border"></span>
+                        <span class="move-border"></span>
+                        <span class="move-border"></span>
+                        <span class="move-border"></span>
+                </h3>
+                <p class="link-text link_contact-text">
+                <?php the_field('link_contact-text'); ?>
                 </p>
-                <div class="info-item info-item_addres">
-                    <i class="info-item-i fas fa-map-marker-alt"></i><?php the_field('info-item_addres'); ?>
-                    <!-- 13/2 Elizabeth St, Melbourne VIC 3000, Australia -->
+            </div>
+            <div class="form-outer row">
+
+                <!-- Form -->
+                <?php 
+                    echo do_shortcode('[contact-form-7 id="8" title="Контактная форма 1"]');
+                ?>
+                
+                <div class="info col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <div class="form-title">Contact Info</div>
+                    <p class="info-item info-item_text info-text">
+                        <?php the_field('info-item_text'); ?>
+                        <!-- 
+                        Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat
+                        -->
+                    </p>
+                    <div class="info-item info-item_addres">
+                        <i class="info-item-i fas fa-map-marker-alt"></i><?php the_field('info-item_addres'); ?>
+                        <!-- 13/2 Elizabeth St, Melbourne VIC 3000, Australia -->
+                    </div>
+                    <div class="info-item info-item_tel"><i class="info-item-i fas fa-phone"></i><?php the_field('info-item_tel'); ?>
+                    <!-- +61 3146 8728, +61 0987 6543 -->
+                    </div>
+                    <div class="info-item info-item_email"><i class="info-item-i fas fa-envelope"></i><?php the_field('info-item_email'); ?>
+                    <!-- support@envato.net -->
+                    </div>
+                
                 </div>
-                <div class="info-item info-item_tel"><i class="info-item-i fas fa-phone"></i><?php the_field('info-item_tel'); ?>
-                <!-- +61 3146 8728, +61 0987 6543 -->
-                </div>
-                <div class="info-item info-item_email"><i class="info-item-i fas fa-envelope"></i><?php the_field('info-item_email'); ?>
-                <!-- support@envato.net -->
-                </div>
-            
             </div>
         </div>
-    </div>
 
     </section>
 
+    <!-- Footer -->
     <footer class="footer"></footer>
 
+    <!-- Btn move back -->
     <div class="up" id="back-top">Up <i class="up-i fas fa-arrow-up"></i></div>
 
+    <!-- Preloader -->
     <div id="page-preloader"><div class="contpre"><span class="spinner"></span><br>Подождите<br><small>идет загрузка</small></div></div>
         
 
